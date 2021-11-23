@@ -6,7 +6,7 @@ const port = 8080;
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
-app.use('/assests', express.static('src/public'));
+app.use('/assets', express.static('src/public/'));
 
 app.get('/', (req, res) => {
 	res.render('pages/index.ejs');
