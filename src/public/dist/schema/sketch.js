@@ -8,11 +8,11 @@ let canW = 600;
 let canH = 400;
 
 function preload(){
-  bg = loadImage('assets/bg.jpg');
-  ph = loadImage('assets/h.jpg');
-  px = loadImage('assets/x.jpg');
-  py = loadImage('assets/y.jpg');
-  pz = loadImage('assets/z.jpg');
+  bg = loadImage('/assets/dist/schema/images/bg.jpg');
+  ph = loadImage('/assets/dist/schema/images/h.jpg');
+  px = loadImage('/assets/dist/schema/images/x.jpg');
+  py = loadImage('/assets/dist/schema/images/y.jpg');
+  pz = loadImage('/assets/dist/schema/images/z.jpg');
 
   pps = [ph, px, py, pz];
 }
