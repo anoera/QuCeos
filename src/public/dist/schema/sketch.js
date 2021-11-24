@@ -21,8 +21,8 @@ function setup() {
   let rectangles = new Array(Draggable);
   rlist = rectangles;
   
-  createCanvas(canW, canH, WEBGL);
-
+  var canvas = createCanvas(canW, canH, WEBGL);
+  canvas.parent('sketch-holder');
   back = new Back(-canW/2,-canH/2,bgW,bgH);
 
 
