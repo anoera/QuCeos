@@ -17,6 +17,11 @@ main {
   overflow-y: hidden; */
 }
 
+.row {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 .b-example-divider {
   flex-shrink: 0;
   width: 1.5rem;
