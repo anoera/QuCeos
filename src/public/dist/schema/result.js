@@ -1,4 +1,4 @@
-class Back {
+class Result {
     constructor(x, y, w, h) {
         this.x = x;
         this.y = y;
@@ -11,6 +11,7 @@ class Back {
     }
 
     show(p, img) {
+        console.log('xxx');
         p.noStroke();
         p.texture(img);
         p.rect(this.x, this.y, this.w, this.h);
