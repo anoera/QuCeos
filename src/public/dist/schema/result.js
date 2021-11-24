@@ -11,7 +11,7 @@ class Result {
     }
 
     show(p, img) {
-        console.log('xxx');
+        // console.log('xxx');
         p.noStroke();
         p.texture(img);
         p.rect(this.x, this.y, this.w, this.h);
