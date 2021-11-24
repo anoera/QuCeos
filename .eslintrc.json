@@ -10,7 +10,7 @@
 	},
 	"rules": {
 		"linebreak-style": ["error", "unix"],
-		"quotes": ["error", "single"],
+		"quotes": ["warn", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
 		"semi": ["error", "always"]
 	}
 }

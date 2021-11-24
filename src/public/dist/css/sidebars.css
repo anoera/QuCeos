@@ -1,6 +1,7 @@
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  background-color: #C8C8C8;
 }
 
 html {
