@@ -117,12 +117,13 @@ var t = function (p) {
     bg = p.loadImage('/assets/dist/schema/images/bb84-bg.png');
     eve = p.loadImage('/assets/dist/schema/images/bb84-eve.png');
     calice = p.loadImage('/assets/dist/schema/images/choix-alice.png');
-    ceve = p.loadImage('/assets/dist/schema/images/choix-alice.png');
-    cbob = p.loadImage('/assets/dist/schema/images/choix-alice.png');
+    ceve = p.loadImage('/assets/dist/schema/images/choix-eve.png');
+    cbob_noEve = p.loadImage('/assets/dist/schema/images/choix-bob-bon.png');
+    cbob_Eve = p.loadImage('/assets/dist/schema/images/choix-bob-esp.png');
 
     aliceOn = false;
     eveOn = false;
-    bobOn = false;
+    bobOn = 0;
 
     p.setup = function () {
         p.createCanvas(canW, canH, p.WEBGL);
@@ -131,6 +132,7 @@ var t = function (p) {
         eveIcon = new Draggable(-(canW / 2 - 25), 150, 150, 75)
         choixAlice = new Result(-575, -200, 115, 320);
         choixEve = new Result(-257, -200, 115, 320);
+        choixBob = new Result(60, -200, 115, 320);
     };
 
     p.draw = function () {
@@ -145,6 +147,16 @@ var t = function (p) {
         }
         if (aliceOn && eveOn) {
             choixEve.show(p, ceve);
+        }
+        if (bobOn) {
+            if (aliceOn) {
+                if (eveOn) {
+                    choixBob.show(p, cbob_Eve);
+                }
+                else {
+                    choixBob.show(p, cbob_noEve);
+                }
+            }
         }
     };
 
@@ -165,9 +177,9 @@ var t = function (p) {
             eveIcon.x = -275;
             eveIcon.y = -312;
             eveOn = true;
-            if (bobOn) {
-                bobOn = !bobOn;
-            }
+            // if (bobOn) {
+            //     bobOn = !bobOn;
+            // }
         }
         else {
             eveIcon.x = -(canW / 2 - 25);
@@ -189,11 +201,9 @@ var t = function (p) {
 
         //Click Bob
         if (p.mouseX > 668 && p.mouseX < 768 && p.mouseY > 25 && p.mouseY < 125) {
-            console.log('click B');
+            bobOn = !bobOn;
         }
-
     };
-
 };
 
 var myp5 = new p5(t, 'sketch-holder2');
