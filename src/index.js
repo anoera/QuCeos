@@ -16,4 +16,4 @@ app.get('/index2', (req, res) => {
 	res.render('pages/index2.ejs');
 });
 
-app.listen(port, () => console.log(`server listening on localhost:${port}`));
+app.listen(port, () => console.log(`server listening on http://localhost:${port}`));
