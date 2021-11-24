@@ -8,15 +8,15 @@ const data = {
 	sections: [
 		{
 			topic: 'Fondamentaux',
-			subtopics: ['Qubits', 'Superposition / intrication', 'Théorème du non-clonage', 'Téléportation quantique'],
+			subtopics: ['Qubits', 'Superposition / intrication', 'Théorème du non-clonage'],
 		},
 		{
 			topic: 'Algorithmie',
-			subtopics: [''],
+			subtopics: ['Porte logique à un qubit', 'Porte logique à deux qubits'],
 		},
 		{
 			topic: 'Cybersécurité',
-			subtopics: ['Algorithme de Shor', 'Quantum Key Distribution'],
+			subtopics: ['Algorithme de Shor', 'Algorithme BB84'],
 		},
 	],
 };

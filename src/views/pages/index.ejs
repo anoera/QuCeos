@@ -76,18 +76,14 @@
                         </button>
                         <div class="collapse " id="home-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#article1" class="link-dark rounded text-white">
+                                <li><a href="#article1.1" class="link-dark rounded text-white">
                                         <%= sections[0].subtopics[0] %>
                                     </a></li>
-                                <li><a href="#article2" class="link-dark rounded text-white">
+                                <li><a href="#article1.2" class="link-dark rounded text-white">
                                         <%= sections[0].subtopics[1] %>
                                     </a></li>
-                                <li><a href="#article3" class="link-dark rounded text-white">
+                                <li><a href="#article1.3" class="link-dark rounded text-white">
                                         <%= sections[0].subtopics[2] %>
-                                    </a>
-                                </li>
-                                <li><a href="#article4" class="link-dark rounded text-white">
-                                        <%= sections[0].subtopics[3] %>
                                     </a>
                                 </li>
                             </ul>
@@ -100,8 +96,12 @@
                         </button>
                         <div class="collapse" id="home-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark rounded text-white">
-                                        Overview</a></li>
+                                <li><a href="#article2.1" class="link-dark rounded text-white">
+                                        <%= sections[1].subtopics[0] %>
+                                    </a></li>
+                                <li><a href="#article2.2" class="link-dark rounded text-white">
+                                        <%= sections[1].subtopics[1] %>
+                                    </a></li>
                             </ul>
                         </div>
                     </li>
@@ -112,29 +112,17 @@
                         </button>
                         <div class="collapse" id="home-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark rounded text-white">
+                                <li><a href="#article3.1" class="link-dark rounded text-white">
                                         <%= sections[2].subtopics[0] %>
                                     </a></li>
-                                <li><a href="#" class="link-dark rounded text-white">
+                                <li><a href="#article3.2" class="link-dark rounded text-white">
                                         <%= sections[2].subtopics[1] %>
                                     </a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="mb-1">
-                        <div class="collapse" id="account-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark rounded">New...</a></li>
-                                <li><a href="#" class="link-dark rounded">Profile</a></li>
-                                <li><a href="#" class="link-dark rounded">Settings</a></li>
-                                <li><a href="#" class="link-dark rounded">Sign out</a></li>
-                            </ul>
-                        </div>
-                    </li>
                 </ul>
-
             </div>
-
         </div>
 
         <div class="b-example-divider"></div>
@@ -145,7 +133,7 @@
             </h1>
             <div class="row">
                 <div class="col-xxl">
-                    <h2 id="article1">
+                    <h2 id="article1.1">
                         <%= sections[0].subtopics[0] %>
                     </h2>
                 </div>
@@ -156,7 +144,7 @@
 
             <div class="row">
                 <div class="col-xxl">
-                    <h2 id="article2">
+                    <h2 id="article1.2">
                         <%= sections[0].subtopics[1] %>
                     </h2>
 
@@ -170,22 +158,10 @@
 
             <div class="row">
                 <div class="col-xxl">
-                    <h2 id="article3">
+                    <h2 id="article1.3">
                         <%= sections[0].subtopics[2] %>
                     </h2>
 
-                </div>
-                <div class="col-xxl">
-                    <div id="sketch-holder2" style="min-height: 500px; background-color: blue;">
-
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id='article4'>
-                        <%= sections[0].subtopics[3] %>
-                    </h2>
                 </div>
                 <div class="col-xxl">
                     <div id="sketch-holder2" style="min-height: 500px; background-color: blue;">
@@ -199,10 +175,22 @@
             </h1>
             <div class="row">
                 <div class="col-xxl">
-                    <h2 id="article2">
-                        sdlkfslfjsldjf
+                    <h2 id='article2.1'>
+                        <%= sections[1].subtopics[0] %>
                     </h2>
+                </div>
+                <div class="col-xxl">
+                    <div id="sketch-holder2" style="min-height: 500px; background-color: blue;">
 
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xxl">
+                    <h2 id='article2.2'>
+                        <%= sections[1].subtopics[1] %>
+                    </h2>
                 </div>
                 <div class="col-xxl">
                     <div id="sketch-holder2" style="min-height: 500px; background-color: blue;">
@@ -216,7 +204,7 @@
             </h1>
             <div class="row">
                 <div class="col-xxl">
-                    <h2 id="article2">
+                    <h2 id="article3.1">
                         <%= sections[2].subtopics[0] %>
                     </h2>
 
@@ -230,7 +218,7 @@
 
             <div class="row">
                 <div class="col-xxl">
-                    <h2 id="article3">
+                    <h2 id="article3.2">
                         <%= sections[2].subtopics[1] %>
                     </h2>
 
