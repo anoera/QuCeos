@@ -1,0 +1,11 @@
+Le protocole BB84 est un canal quantique sécurisé permettant la transmission d'un message d'un acteur Alice vers un autre nommé Bob.
+Alice choisit deux listes constituées aléatoirement l'une de 0 et de 1, l'autre d'une base x ou +. Cliquer sur le A du schéma ci-dessous pour générer les deux listes
+Les bits sont envoyés à Bob sous forme de qubits.
+A la réception, Bob choisit aléatoirement une base x ou + pour mesurer le qubit.
+Une fois tout les qubits reçus et mesurés, Alice et Bob s'échangent leur liste de bases et ne conservent que les bit mesurés dans la même base. Cliquer sur le B pour mesurer les qubits dans une base aléatoire et comparer la base d'Alice avec celle de Bob
+A la fin de l'opération, Bob et Alice obtiennent la même liste de bits.
+
+
+La sécurité de ce protocole s'appuie sur le théorème de non-clonage quantique. Un intermédaire nommé Eve ne peut pas intercepter, mesurer un qubit et le renvoyer à Bob sans perturber le qubit
+Alice et Bob détecterons les incohérences laissés par les mesures d'Eve et pourrons recommencer jusqu'à ce qu'ils soient raisonnablement certains que leur échagne n'a pas été écouté.
+Vous pouvez simuler l'espionnage en déplacant Eve sur le carré espion.
