@@ -221,10 +221,11 @@ var qbit1 = function (p) {
       p.ambientLight(255, 255, 255, 255);
       p.specularMaterial(180, 0, 0, 255);
       p.shininess(50);
-      let locX = p.mouseX - p.width / 2;
-      let locY = p.mouseY - p.height / 2;
-      p.pointLight(255, 255, 255, locX, locY, 50);
-      p.rotateY(p.frameCount * 0.01);
+    //   let locX = p.mouseX - p.width / 2;
+    //   let locY = p.mouseY - p.height / 2;
+    //   p.pointLight(255, 255, 255, locX, locY, 50);
+      p.rotateX(p.frameCount * -0.01);
+      p.rotateY(p.frameCount * -0.01);
       p.torus(25, 12.5);
     };
   };
@@ -239,9 +240,10 @@ var qbit1 = function (p) {
       p.ambientLight(255, 255, 255, 255);
       p.specularMaterial(0, 0, 0, 255);
       p.shininess(50);
-      let locX = p.mouseX - p.width / 2;
-      let locY = p.mouseY - p.height / 2;
-      p.pointLight(255, 255, 255, locX, locY, 50);
+    //   let locX = p.mouseX - p.width / 2;
+    //   let locY = p.mouseY - p.height / 2;
+    //   p.pointLight(255, 255, 255, locX, locY, 50);
+      p.rotateX(p.frameCount * -0.01);
       p.rotateY(p.frameCount * 0.01);
       p.torus(25, 12.5);
     };
@@ -259,6 +261,7 @@ var qbit1 = function (p) {
       p.background(200, 200, 200);
       p.texture(p.vid);
       p.rotateY(p.frameCount * 0.01);
+      p.rotateX(p.frameCount * 0.01);
       p.torus(25, 12.5);
     };
   };
