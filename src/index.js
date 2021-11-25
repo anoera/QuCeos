@@ -9,7 +9,7 @@ const data = {
 	sections: [
 		{
 			topic: 'Fondamentaux',
-			subtopics: ['Qubits', 'Superposition / intrication', 'Théorème du non-clonage'],
+			subtopics: ['Qubits', 'Notations de Dirac', 'Théorème du non-clonage'],
 		},
 		{
 			topic: 'Algorithmie',
