@@ -312,60 +312,121 @@
                         <h2 id="article2.2">
                             <%= sections[1].subtopics[1] %>
                         </h2>
+                        <p>Les opérations controlées :
+                            <br>
+                            Celles-ci contiennent un bit de contrôle et un bit cible, nommés respectivement c et t (pour
+                            control et target).
+                            On peut donc faire des portes contrôlées de plusieurs types :
+
+                        </p>
+                        <div class="col-xxl d-flex flex-column">
+                            <div class="row">
+                                <div class="col-sm-2 d-flex flex-column">
+                                    <img style="width: 200px;" src="/assets/dist/schema/images/cnot.png">
+                                </div>
+                                <div class="col-sm-10 d-flex flex-column">
+                                    <p>
+                                        Exemple : la porte CX, controlée X ou CNOT :
+                                        <br>
+                                        Elle est représenté ainsi.
+                                        <br>
+                                        Il s'agit d'une porte X avec un qubit de contrôle.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-2 d-flex flex-column">
+                                    <img style="width: 200px;" src="/assets/dist/schema/images/cnot-table.png">
+                                </div>
+                                <div class="col-sm-10 d-flex flex-column">
+                                    <p>
+                                        Voici la table de vérité de la porte CNOT.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Autre exemple : La porte SWAP :
+                            <br>
+                            Elle effectue l'opération suivante :
+                            |a, b> devient |b, a>.
+                        </p>
+                        <div class="col-xxl d-flex flex-column">
+                            <div class="row">
+                                <div class="col-sm-2 d-flex flex-column">
+                                    <img style="width: 200px;" src="/assets/dist/schema/images/cnot.png">
+                                </div>
+                                <div class="col-sm-10 d-flex flex-column">
+                                    <p>
+                                        Elle est représenté ainsi.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-2 d-flex flex-column">
+                                    <img style="width: 200px;" src="/assets/dist/schema/images/cnot-table.png">
+                                </div>
+                                <div class="col-sm-10 d-flex flex-column">
+                                    <p>
+                                        Voici la table de vérité de la porte SWAP.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-xxl">
-                        <div style="min-height: 500px; background-color: blue"></div>
+
+                    <h1>
+                        <%= sections[2].topic %>
+                    </h1>
+                    <div class="row">
+                        <div class="col-xxl">
+                            <h2 id="article3.1">
+                                <%= sections[2].subtopics[0] %>
+                            </h2>
+                        </div>
+                        <div class="col-xxl">
+                            <div style="min-height: 500px; background-color: blue"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xxl">
+                            <h2 id="article3.2">
+                                <%= sections[2].subtopics[1] %>
+                            </h2>
+                            <p>
+                                Le protocole BB84 est un canal quantique sécurisé permettant la transmission d'un
+                                message
+                                d'un acteur Alice vers un autre nommé Bob.
+                            </p>
+
+                            <p>
+                                Alice choisit deux listes constituées aléatoirement l'une de 0 et de 1, l'autre d'une
+                                base x
+                                ou +. Cliquez sur le A du schéma ci-dessous pour générer les deux listes.</br>
+                                Les bits sont envoyés à Bob sous forme de qubits.</br>
+                                A la réception, Bob choisit aléatoirement une base x ou + pour mesurer le qubit.</br>
+                                Une fois tout les qubits reçus et mesurés, Alice et Bob s'échangent leur liste de bases
+                                et
+                                ne conservent que les bits mesurés dans la même base. Cliquez sur le B pour mesurer les
+                                qubits dans une base aléatoire et comparer la base d'Alice avec celle de Bob.</br>
+                                A la fin de l'opération, Bob et Alice obtiennent la même liste de bits.
+                            </p>
+
+                            <p>
+                                La sécurité de ce protocole s'appuie sur le théorème de non-clonage quantique. Un
+                                intermédaire nommé Eve ne peut pas intercepter, mesurer un qubit et le renvoyer à Bob
+                                sans
+                                perturber le qubit.</br>
+                                Alice et Bob détecterons les incohérences laissés par les mesures d'Eve et pourrons
+                                recommencer jusqu'à ce qu'ils soient raisonnablement certains que leur échange n'a pas
+                                été
+                                écouté.</br>
+                                Vous pouvez simuler l'espionnage en déplacant Eve sur le carré espion.
+                            </p>
+                            <div class="col-xxl" id="bb84"></div>
+                        </div>
                     </div>
                 </div>
-
-                <h1>
-                    <%= sections[2].topic %>
-                </h1>
-                <div class="row">
-                    <div class="col-xxl">
-                        <h2 id="article3.1">
-                            <%= sections[2].subtopics[0] %>
-                        </h2>
-                    </div>
-                    <div class="col-xxl">
-                        <div style="min-height: 500px; background-color: blue"></div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xxl">
-                        <h2 id="article3.2">
-                            <%= sections[2].subtopics[1] %>
-                        </h2>
-                        <p>
-                            Le protocole BB84 est un canal quantique sécurisé permettant la transmission d'un message
-                            d'un acteur Alice vers un autre nommé Bob.
-                        </p>
-
-                        <p>
-                            Alice choisit deux listes constituées aléatoirement l'une de 0 et de 1, l'autre d'une base x
-                            ou +. Cliquez sur le A du schéma ci-dessous pour générer les deux listes.</br>
-                            Les bits sont envoyés à Bob sous forme de qubits.</br>
-                            A la réception, Bob choisit aléatoirement une base x ou + pour mesurer le qubit.</br>
-                            Une fois tout les qubits reçus et mesurés, Alice et Bob s'échangent leur liste de bases et
-                            ne conservent que les bits mesurés dans la même base. Cliquez sur le B pour mesurer les
-                            qubits dans une base aléatoire et comparer la base d'Alice avec celle de Bob.</br>
-                            A la fin de l'opération, Bob et Alice obtiennent la même liste de bits.
-                        </p>
-
-                        <p>
-                            La sécurité de ce protocole s'appuie sur le théorème de non-clonage quantique. Un
-                            intermédaire nommé Eve ne peut pas intercepter, mesurer un qubit et le renvoyer à Bob sans
-                            perturber le qubit.</br>
-                            Alice et Bob détecterons les incohérences laissés par les mesures d'Eve et pourrons
-                            recommencer jusqu'à ce qu'ils soient raisonnablement certains que leur échange n'a pas été
-                            écouté.</br>
-                            Vous pouvez simuler l'espionnage en déplacant Eve sur le carré espion.
-                        </p>
-                        <div class="col-xxl" id="bb84"></div>
-                    </div>
-                </div>
-            </div>
     </main>
 
     <script src="/assets/dist/schema/sketch.js"></script>
