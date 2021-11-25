@@ -11,6 +11,7 @@
 	"rules": {
 		"linebreak-style": ["error", "unix"],
 		"quotes": ["warn", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+		"no-undef": "off",
 		"semi": ["error", "always"]
 	}
 }
