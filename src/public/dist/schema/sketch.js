@@ -207,3 +207,78 @@ var t = function (p) {
 };
 
 var myp5 = new p5(t, 'sketch-holder2');
+
+
+//Donut
+
+var qbit1 = function (p) {
+    p.setup = function () {
+      p.createCanvas(100, 100, p.WEBGL);
+      p.noStroke();
+    };
+    p.draw = function () {
+      p.background(200, 200, 200);
+      p.ambientLight(255, 255, 255, 255);
+      p.specularMaterial(180, 0, 0, 255);
+      p.shininess(50);
+      let locX = p.mouseX - p.width / 2;
+      let locY = p.mouseY - p.height / 2;
+      p.pointLight(255, 255, 255, locX, locY, 50);
+      p.rotateY(p.frameCount * 0.01);
+      p.torus(25, 12.5);
+    };
+  };
+  
+  var qbit0 = function (p) {
+    p.setup = function () {
+      p.createCanvas(100, 100, p.WEBGL);
+      p.noStroke();
+    };
+    p.draw = function () {
+      p.background(200, 200, 200);
+      p.ambientLight(255, 255, 255, 255);
+      p.specularMaterial(0, 0, 0, 255);
+      p.shininess(50);
+      let locX = p.mouseX - p.width / 2;
+      let locY = p.mouseY - p.height / 2;
+      p.pointLight(255, 255, 255, locX, locY, 50);
+      p.rotateY(p.frameCount * 0.01);
+      p.torus(25, 12.5);
+    };
+  };
+  
+  var qbit2 = function (p) {
+    p.setup = function () {
+      p.createCanvas(200, 200, p.WEBGL);
+      p.vid = p.createVideo(["/assets/dist/schema/images/EnRougeEtNoir.mp4"]);
+      p.vid.elt.muted = true;
+      p.vid.loop();
+      p.vid.hide();
+    };
+    p.draw = function () {
+      p.background(200, 200, 200);
+      p.texture(p.vid);
+      p.rotateY(p.frameCount * 0.01);
+      p.torus(50, 25);
+    };
+  };
+  
+  // function setup(){
+  //   createCanvas(200, 200, WEBGL);
+  //   vid = createVideo(['EnRougeEtNoir.mp4']);
+  //   vid.elt.muted = true;
+  //   vid.loop();
+  //   vid.hide();
+  
+  // };
+  // function draw() {
+  //   background(255, 255, 255);
+  //   texture(vid);
+  //   rotateY(frameCount * 0.01);
+  //   torus(50, 25);
+  // };
+  
+  var rouge = new p5(qbit1, "qbit1");
+  var noir = new p5(qbit0, "qbit0");
+  var enRougeEtNoir = new p5(qbit2, "qbit2");
+  

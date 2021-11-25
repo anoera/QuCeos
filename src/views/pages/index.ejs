@@ -1,238 +1,229 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="" />
+		<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+		<meta name="generator" content="Hugo 0.84.0" />
+		<title>Sidebars · Bootstrap v5.0</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Sidebars · Bootstrap v5.0</title>
+		<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/" />
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/">
+		<!-- Bootstrap core CSS -->
+		<link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Bootstrap core CSS -->
-    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			.bd-placeholder-img {
+				font-size: 1.125rem;
+				text-anchor: middle;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				user-select: none;
+			}
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+			@media (min-width: 768px) {
+				.bd-placeholder-img-lg {
+					font-size: 3.5rem;
+				}
+			}
+		</style>
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
+		<!-- Custom styles for this template -->
+		<link href="/assets/dist/css/sidebars.css" rel="stylesheet" />
 
+		<!-- Dependances p5.js -->
+		<script src="/assets/dist/schema/libraries/p5.min.js"></script>
+		<!-- <script src="/assets/dist/schema/libraries/p5.sound.min.js"></script> -->
+	</head>
 
-    <!-- Custom styles for this template -->
-    <link href="/assets/dist/css/sidebars.css" rel="stylesheet">
+	<body>
+		<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+			<symbol id="bootstrap" viewBox="0 0 118 94">
+				<title>Bootstrap</title>
+				<path
+					fill-rule="evenodd"
+					clip-rule="evenodd"
+					d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+				></path>
+			</symbol>
+		</svg>
 
-    <!-- Dependances p5.js -->
-    <script src="/assets/dist/schema/libraries/p5.min.js"></script>
-    <!-- <script src="/assets/dist/schema/libraries/p5.sound.min.js"></script> -->
+		<main>
+			<div class="d-flex flex-column flex-shrink-0 px-3 text-white bg-dark" style="width: 280px">
+				<div class="sticky-top">
+					<hr />
+					<a
+						href="/"
+						class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+					>
+						<svg class="bi me-2" width="40" height="32">
+							<use xlink:href="#bootstrap" />
+						</svg>
+						<span class="fs-4">
+							<h2><%= projectName %></h2>
+						</span>
+					</a>
+					<hr />
 
-</head>
+					<ul class="list-unstyled ps-0">
+						<li class="mb-1">
+							<button
+								class="text-white btn btn-toggle align-items-center rounded collapsed"
+								data-bs-toggle="collapse"
+								data-bs-target="#home-collapse"
+								aria-expanded="false"
+							>
+								<%= sections[0].topic %>
+							</button>
+							<div class="collapse" id="home-collapse">
+								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+									<li>
+										<a href="#article1.1" class="link-dark rounded text-white">
+											<%= sections[0].subtopics[0] %>
+										</a>
+									</li>
+									<li>
+										<a href="#article1.2" class="link-dark rounded text-white">
+											<%= sections[0].subtopics[1] %>
+										</a>
+									</li>
+									<li>
+										<a href="#article1.3" class="link-dark rounded text-white">
+											<%= sections[0].subtopics[2] %>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="mb-1">
+							<button
+								class="text-white btn btn-toggle align-items-center rounded collapsed"
+								data-bs-toggle="collapse"
+								data-bs-target="#home-collapse"
+								aria-expanded="false"
+							>
+								<%= sections[1].topic %>
+							</button>
+							<div class="collapse" id="home-collapse">
+								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+									<li>
+										<a href="#article2.1" class="link-dark rounded text-white">
+											<%= sections[1].subtopics[0] %>
+										</a>
+									</li>
+									<li>
+										<a href="#article2.2" class="link-dark rounded text-white">
+											<%= sections[1].subtopics[1] %>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="mb-1">
+							<button
+								class="text-white btn btn-toggle align-items-center rounded collapsed"
+								data-bs-toggle="collapse"
+								data-bs-target="#home-collapse"
+								aria-expanded="false"
+							>
+								<%= sections[2].topic %>
+							</button>
+							<div class="collapse" id="home-collapse">
+								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+									<li>
+										<a href="#article3.1" class="link-dark rounded text-white">
+											<%= sections[2].subtopics[0] %>
+										</a>
+									</li>
+									<li>
+										<a href="#article3.2" class="link-dark rounded text-white">
+											<%= sections[2].subtopics[1] %>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 
-<body>
+			<div class="b-example-divider"></div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="bootstrap" viewBox="0 0 118 94">
-            <title>Bootstrap</title>
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z">
-            </path>
-        </symbol>
+			<div id="hauler" class="container">
+				<h1><%= sections[0].topic %></h1>
+				<div class="row">
+					<div class="col-xxl">
+						<h2 id="article1.1"><%= sections[0].subtopics[0] %></h2>
+					</div>
+					<div class="col-xxl"></div>
+				</div>
 
-    </svg>
+				<div class="row">
+					<div class="col-xxl">
+						<h2 id="article1.2"><%= sections[0].subtopics[1] %></h2>
+					</div>
+					<div class="col-xxl">
+						<div id="sketch-holder2"></div>
+					</div>
+				</div>
 
-    <main>
-        <div class="d-flex flex-column flex-shrink-0 px-3 text-white bg-dark" style="width: 280px;">
-            <div class="sticky-top">
-                <hr>
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32">
-                        <use xlink:href="#bootstrap" />
-                    </svg>
-                    <span class="fs-4">
-                        <h2>
-                            <%= projectName %>
-                        </h2>
-                    </span>
-                </a>
-                <hr>
+				<div class="row">
+					<div class="col-xxl">
+						<h2 id="article1.3"><%= sections[0].subtopics[2] %></h2>
+						<div id="qbit1"></div>
+						<div id="qbit0"></div>
+						<div id="qbit2"></div>
 
-                <ul class=" list-unstyled ps-0">
-                    <li class="mb-1">
-                        <button class="text-white btn btn-toggle align-items-center rounded collapsed"
-                            data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
-                            <%= sections[0].topic %>
-                        </button>
-                        <div class="collapse " id="home-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#article1.1" class="link-dark rounded text-white">
-                                        <%= sections[0].subtopics[0] %>
-                                    </a></li>
-                                <li><a href="#article1.2" class="link-dark rounded text-white">
-                                        <%= sections[0].subtopics[1] %>
-                                    </a></li>
-                                <li><a href="#article1.3" class="link-dark rounded text-white">
-                                        <%= sections[0].subtopics[2] %>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="mb-1">
-                        <button class="text-white btn btn-toggle align-items-center rounded collapsed"
-                            data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
-                            <%= sections[1].topic %>
-                        </button>
-                        <div class="collapse" id="home-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#article2.1" class="link-dark rounded text-white">
-                                        <%= sections[1].subtopics[0] %>
-                                    </a></li>
-                                <li><a href="#article2.2" class="link-dark rounded text-white">
-                                        <%= sections[1].subtopics[1] %>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="mb-1">
-                        <button class="text-white btn btn-toggle align-items-center rounded collapsed"
-                            data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
-                            <%= sections[2].topic %>
-                        </button>
-                        <div class="collapse" id="home-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#article3.1" class="link-dark rounded text-white">
-                                        <%= sections[2].subtopics[0] %>
-                                    </a></li>
-                                <li><a href="#article3.2" class="link-dark rounded text-white">
-                                        <%= sections[2].subtopics[1] %>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+						<img style="width: 100px" src="/assets/dist/schema/images/mesure.png" />
+					</div>
+					<div class="col-xxl">
+						<div style="min-height: 500px; background-color: blue"></div>
+					</div>
+				</div>
 
-        <div class="b-example-divider"></div>
+				<h1><%= sections[1].topic %></h1>
+				<div class="row">
+					<div class="col-xxl">
+						<h2 id="article2.1"><%= sections[1].subtopics[0] %></h2>
+						<div id="sketch-holder1"></div>
+					</div>
+				</div>
 
-        <div id="hauler" class="container">
-            <h1>
-                <%= sections[0].topic %>
-            </h1>
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id="article1.1">
-                        <%= sections[0].subtopics[0] %>
-                    </h2>
-                </div>
-                <div class="col-xxl">
-                </div>
-            </div>
+				<div class="row">
+					<div class="col-xxl">
+						<h2 id="article2.2"><%= sections[1].subtopics[1] %></h2>
+					</div>
+					<div class="col-xxl">
+						<div style="min-height: 500px; background-color: blue"></div>
+					</div>
+				</div>
 
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id="article1.2">
-                        <%= sections[0].subtopics[1] %>
-                    </h2>
+				<h1><%= sections[2].topic %></h1>
+				<div class="row">
+					<div class="col-xxl">
+						<h2 id="article3.1"><%= sections[2].subtopics[0] %></h2>
+					</div>
+					<div class="col-xxl">
+						<div style="min-height: 500px; background-color: blue"></div>
+					</div>
+				</div>
 
-                </div>
-                <div class="col-xxl">
-                    <div id="sketch-holder2">
+				<div class="row">
+					<div class="col-xxl">
+						<h2 id="article3.2"><%= sections[2].subtopics[1] %></h2>
+					</div>
+					<div class="col-xxl">
+						<div style="min-height: 500px; background-color: blue"></div>
+					</div>
+				</div>
+			</div>
+		</main>
 
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id="article1.3">
-                        <%= sections[0].subtopics[2] %>
-                    </h2>
-
-                </div>
-                <div class="col-xxl">
-                    <div style="min-height: 500px; background-color: blue;">
-
-                    </div>
-                </div>
-            </div>
-
-            <h1>
-                <%= sections[1].topic %>
-            </h1>
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id='article2.1'>
-                        <%= sections[1].subtopics[0] %>
-                    </h2>
-                    <div id="sketch-holder1"></div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id='article2.2'>
-                        <%= sections[1].subtopics[1] %>
-                    </h2>
-                </div>
-                <div class="col-xxl">
-                    <div style="min-height: 500px; background-color: blue;">
-
-                    </div>
-                </div>
-            </div>
-
-            <h1>
-                <%= sections[2].topic %>
-            </h1>
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id="article3.1">
-                        <%= sections[2].subtopics[0] %>
-                    </h2>
-
-                </div>
-                <div class="col-xxl">
-                    <div style="min-height: 500px; background-color: blue;">
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id="article3.2">
-                        <%= sections[2].subtopics[1] %>
-                    </h2>
-
-                </div>
-                <div class="col-xxl">
-                    <div style="min-height: 500px; background-color: blue;">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <script src="/assets/dist/schema/sketch.js"></script>
-    <script src="/assets/dist/schema/draggable.js"></script>
-    <script src="/assets/dist/schema/back.js"></script>
-    <script src="/assets/dist/schema/result.js"></script>
-    <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+		<script src="/assets/dist/schema/sketch.js"></script>
+		<script src="/assets/dist/schema/draggable.js"></script>
+		<script src="/assets/dist/schema/back.js"></script>
+		<script src="/assets/dist/schema/result.js"></script>
+		<script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
 </html>
