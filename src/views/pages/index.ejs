@@ -200,77 +200,150 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id="article1.2">
-                        <%= sections[0].subtopics[1] %>
-                    </h2>
-                    <br>
-                    <img style="width: 400px" src="/assets/dist/schema/images/dirac.png" />
-
+            <div class="row" style="margin-bottom:50px">
+                <div class="col-xxl d-flex flex-column">
+                    <div class="col-xxl">
+                        <h2 id="article1.2">
+                            <%= sections[0].subtopics[1] %>
+                        </h2>
+                        <br>
+                        <div class="col-sm6">
+                            <img style="width: 400px" src="/assets/dist/schema/images/dirac2.png" />
+                            <!-- </div>
+                        <img style="width: 400px" src="/assets/dist/schema/images/dirac.png" /> -->
+                        </div>
+                        <div class="col-sm-6">
+                            <img style="width: 400px" src="/assets/dist/schema/images/dirac2.png" />
+                        </div>
+                        <div class="col-sm-6">
+                            <img style="width: 400px" src="/assets/dist/schema/images/dirac3.png" />
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xxl">
-                    <div id="sketch-holder2"></div>
+
+                <div class="row">
+                    <div class="col-xxl">
+                        <h2 id="article1.3">
+                            <%= sections[0].subtopics[2] %>
+                        </h2>
+
+                        <div class="col-xxl d-flex flex-column">
+                            <div class="row">
+                                <div class="col-sm-2 d-flex flex-column">
+                                    <img style="width: 100px;" src="/assets/dist/schema/images/q0.png">
+                                </div>
+                                <div class="col-sm-10 d-flex flex-column">
+                                    <p>
+                                        Un qubit est représenté par un cercle avec une numérotation en indice.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-2 d-flex flex-column">
+                                    <img style="width: 200px;" src="/assets/dist/schema/images/q0 – 1.png">
+                                </div>
+                                <div class="col-sm-10 d-flex flex-column">
+                                    <p>
+                                        Les qubits sont suivis d'une ligne simple sur laquelle on applique les
+                                        opérations
+                                        logiques.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-2 d-flex flex-column">
+                                    <img style="width: 100px;" src="/assets/dist/schema/images/cbit.png">
+                                </div>
+                                <div class="col-sm-10 d-flex flex-column">
+                                    <p>
+                                        Un bit classique/bit de mémoire est représenté par un carré avec une lettre,
+                                        c'est là qu'on stock les résultats fournis par l'algorithme.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-2 d-flex flex-column">
+                                    <img style="width: 200px;" src="/assets/dist/schema/images/cbit – 1.png">
+                                </div>
+                                <div class="col-sm-10 d-flex flex-column">
+                                    <p>
+                                        Les bits classiques sont suivis d'une double ligne
+                                        à laquelle on peut accéder par une ligne verticale afin de stocker et appeler
+                                        les résultats depuis la ligne quantique.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-2 d-flex flex-column">
+                                    <img style="width: 100px;" src="/assets/dist/schema/images/mesure.png">
+                                </div>
+                                <div class="col-sm-10 d-flex flex-column">
+                                    <p>
+                                        Les icônes de mesure s'applique sur les lignes quantiques avec une ligne
+                                        verticale
+                                        vers un bit de mémoire.
+                                        Celle-ci détruit l'état d'un qubit puisqu'en le mesurant, on le force à prendre
+                                        un état.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h1>
+                    <%= sections[1].topic %>
+                </h1>
+                <div class="row">
+                    <div class="col-xxl">
+                        <h2 id="article2.1">
+                            <%= sections[1].subtopics[0] %>
+                        </h2>
+                        <p>
+                            Les portes logiques sont représentées par des carrés avec une lettre correspondant au type
+                            de la porte à l'intérieur.
+                            <br>
+                            Voici quelques portes les plus utilisées.
+                            Glissez les portes sur le schéma pour voir ce qu'elles font.
+                        </p>
+                        <div id="1qbitdoors"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xxl">
+                        <h2 id="article2.2">
+                            <%= sections[1].subtopics[1] %>
+                        </h2>
+                    </div>
+                    <div class="col-xxl">
+                        <div style="min-height: 500px; background-color: blue"></div>
+                    </div>
+                </div>
+
+                <h1>
+                    <%= sections[2].topic %>
+                </h1>
+                <div class="row">
+                    <div class="col-xxl">
+                        <h2 id="article3.1">
+                            <%= sections[2].subtopics[0] %>
+                        </h2>
+                    </div>
+                    <div class="col-xxl">
+                        <div style="min-height: 500px; background-color: blue"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xxl">
+                        <h2 id="article3.2">
+                            <%= sections[2].subtopics[1] %>
+                        </h2>
+                        <div class="col-xxl" id="bb84"></div>
+                    </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id="article1.3">
-                        <%= sections[0].subtopics[2] %>
-                    </h2>
-                </div>
-                <div class="col-xxl">
-                    <div style="min-height: 500px; background-color: blue"></div>
-                </div>
-            </div>
-
-            <h1>
-                <%= sections[1].topic %>
-            </h1>
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id="article2.1">
-                        <%= sections[1].subtopics[0] %>
-                    </h2>
-                    <div id="1qbitdoors"></div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id="article2.2">
-                        <%= sections[1].subtopics[1] %>
-                    </h2>
-                </div>
-                <div class="col-xxl">
-                    <div style="min-height: 500px; background-color: blue"></div>
-                </div>
-            </div>
-
-            <h1>
-                <%= sections[2].topic %>
-            </h1>
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id="article3.1">
-                        <%= sections[2].subtopics[0] %>
-                    </h2>
-                </div>
-                <div class="col-xxl">
-                    <div style="min-height: 500px; background-color: blue"></div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xxl">
-                    <h2 id="article3.2">
-                        <%= sections[2].subtopics[1] %>
-                    </h2>
-                    <div class="col-xxl" id="bb84"></div>
-                </div>
-            </div>
-        </div>
     </main>
 
     <script src="/assets/dist/schema/sketch.js"></script>
