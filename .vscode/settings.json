@@ -3,7 +3,6 @@
 	"editor.formatOnSave": true,
 	"editor.detectIndentation": false,
 	"editor.guides.bracketPairs": "active",
-	"terminal.integrated.defaultProfile.windows": "Git Bash",
 	"prettier.endOfLine": "lf",
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features"
