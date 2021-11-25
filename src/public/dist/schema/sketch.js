@@ -102,7 +102,7 @@ var s = function (p) { // p could be any variable name
         }
     };
 };
-var myp5 = new p5(s, 'sketch-holder1');
+var myp5 = new p5(s, '1qbitdoors');
 
 // BB84
 var t = function (p) {
@@ -206,7 +206,7 @@ var t = function (p) {
     };
 };
 
-var myp5 = new p5(t, 'sketch-holder2');
+var myp5 = new p5(t, 'bb84');
 
 
 //Donut
@@ -249,7 +249,7 @@ var qbit1 = function (p) {
   
   var qbit2 = function (p) {
     p.setup = function () {
-      p.createCanvas(200, 200, p.WEBGL);
+      p.createCanvas(100, 100, p.WEBGL);
       p.vid = p.createVideo(["/assets/dist/schema/images/EnRougeEtNoir.mp4"]);
       p.vid.elt.muted = true;
       p.vid.loop();
@@ -259,7 +259,7 @@ var qbit1 = function (p) {
       p.background(200, 200, 200);
       p.texture(p.vid);
       p.rotateY(p.frameCount * 0.01);
-      p.torus(50, 25);
+      p.torus(25, 12.5);
     };
   };
   
