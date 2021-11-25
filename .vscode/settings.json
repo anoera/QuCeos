@@ -2,6 +2,5 @@
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
 	"editor.detectIndentation": false,
-	"editor.guides.bracketPairs": "active",
-    "editor.guide"
+	"editor.guides.bracketPairs": "active"
 }
