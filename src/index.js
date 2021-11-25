@@ -1,7 +1,8 @@
 const express = require('express');
+require('dotenv').config();
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT;
 
 const data = {
 	projectName: 'QuCeos',
